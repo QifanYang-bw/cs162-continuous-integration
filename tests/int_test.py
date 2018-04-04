@@ -10,8 +10,8 @@ class IntergrationTest(unittest.TestCase):
         inserted = Expression.query.filter(text=expression).first()
         self.assertEqual(inserted.text, expression)
 
-    def test_wrong_expression(self):
-        expression = "1 + a"
-        r = requests.post('http://localhost:5000', data = {'expression':expression})
-        inserted = Expression.query.filter(text=expression).first()
-        self.assertEqual(inserted, None)
+    # def test_wrong_expression(self):
+    #     expression = "1 + a"
+    #     r = requests.post('http://localhost:5000', data = {'expression':expression})
+    #     inserted = Expression.query.filter(text=expression).first()
+    #     self.assertEqual(inserted, None)
