@@ -1,6 +1,6 @@
 import unittest
 import requests
-from .app import Expression
+from ..web import db as Expression
 
 class IntergrationTest(unittest.TestCase):
 
